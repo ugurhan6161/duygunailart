@@ -1,0 +1,799 @@
+<html><head><base href="duygunailart.com"><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Duygu Nail Art - Profesyonel tırnak bakımı, manikür, protez tırnak, kalıcı oje ve nail art hizmetleri">
+    <meta name="keywords" content="nail art, tırnak bakımı, manikür, protez tırnak, kalıcı oje, İstanbul">
+    <title>Duygu Nail Art | Profesyonel Tırnak Bakımı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff9f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #fff5e6, #ffe4c4);
+            color: #5c4033;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .brand-image {
+            max-width: 200px; /* Adjust size as needed */
+            height: auto;
+            margin: 15px auto;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8em;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #deb887;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #deb887;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                text-align: right;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links a {
+                padding: 10px 0;
+            }
+        }
+
+        .section {
+            padding: 60px 0;
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 300px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ffe4c4, #deb887);
+        }
+
+        .service-icon {
+            font-size: 2.8em;
+            color: #deb887;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #ffe4c4, #deb887);
+            color: #5c4033;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(222,184,135,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(222,184,135,0.3);
+        }
+
+        .service-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+
+        h2 {
+            text-align: center;
+            color: #222;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #ffe4c4, #deb887);
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.8em;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        .contact-info {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item {
+            margin-bottom: 30px;
+        }
+
+        .contact-item i {
+            color: #deb887;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .contact-item p {
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        .working-hours {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .working-hours h3 {
+            color: #deb887;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 60px;
+        }
+
+        .appointment-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #deb887;
+        }
+
+        .price-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: white;
+            padding: 20px 30px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .price-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-name {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .service-name i {
+            color: #deb887;
+            font-size: 1.5em;
+            width: 30px;
+            text-align: center;
+        }
+
+        .service-name h3 {
+            margin: 0;
+            color: #222;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #deb887;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .logo {
+                font-size: 2em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .price-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                gap: 10px;
+            }
+
+            .service-name {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .appointment-form {
+                padding: 20px;
+            }
+
+            .price {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Duygu Nail Art</h1>
+            <img src="/Adsız tasarım (1).png" alt="Duygu Nail Art Logo" class="brand-image">
+            <p class="tagline">Profesyonel Tırnak Bakımı ve Nail Art</p>
+            <div class="social-links">
+                <a href="https://instagram.com/duygunailarttt" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/19024000861" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="showSection('services')">Hizmetlerimiz</a></li>
+                <li><a onclick="showSection('prices')">Fiyat Listesi</a></li>
+                <li><a onclick="showSection('appointment')">Randevu Al</a></li>
+                <li><a onclick="showSection('contact')">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="services" class="section">
+        <div class="container">
+            <h2>Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-paint-brush service-icon"></i>
+                    <h3>Nail Art</h3>
+                    <p>Özel tasarım tırnak süslemeleri ve benzersiz nail art uygulamaları</p>
+                    <button class="btn service-btn" onclick="showSectionAndSelectService('appointment', 'Nail Art')">Randevu Al</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spa service-icon"></i>
+                    <h3>Manikür</h3>
+                    <p>Profesyonel manikür ve el bakım hizmetleri</p>
+                    <button class="btn service-btn" onclick="showSectionAndSelectService('appointment', 'Manikür')">Randevu Al</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-gem service-icon"></i>
+                    <h3>Protez Tırnak</h3>
+                    <p>Kalıcı ve doğal görünümlü protez tırnak uygulamaları</p>
+                    <button class="btn service-btn" onclick="showSectionAndSelectService('appointment', 'Protez Tırnak')">Randevu Al</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-magic service-icon"></i>
+                    <h3>Kalıcı Oje</h3>
+                    <p>Uzun süre dayanıklı kalıcı oje uygulamaları</p>
+                    <button class="btn service-btn" onclick="showSectionAndSelectService('appointment', 'Kalıcı Oje')">Randevu Al</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="prices" class="section">
+        <div class="container">
+            <h2>Fiyat Listesi</h2>
+            <div class="price-list">
+                <!-- Basic Services -->
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-spa"></i>
+                        <h3>Manikür</h3>
+                    </div>
+                    <div class="price">₺400</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-water"></i>
+                        <h3>Islak Manikür</h3>
+                    </div>
+                    <div class="price">₺500</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-magic"></i>
+                        <h3>Manikür + Kalıcı oje Düz Renk</h3>
+                    </div>
+                    <div class="price">₺600</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Tırnak Güçlendirme + Kalıcı Oje</h3>
+                    </div>
+                    <div class="price">₺700</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-hand-paper"></i>
+                        <h3>Tırnak Yeme</h3>
+                    </div>
+                    <div class="price">₺900</div>
+                </div>
+                
+                <!-- Protez Services -->
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-gem"></i>
+                        <h3>Protez Tırnak</h3>
+                    </div>
+                    <div class="price">₺800</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-gem"></i>
+                        <h3>Protez Tırnak (Şablon)</h3>
+                    </div>
+                    <div class="price">₺1000</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-toolbox"></i>
+                        <h3>Protez Tırnak Bakımı</h3>
+                    </div>
+                    <div class="price">₺700</div>
+                </div>
+                
+                <!-- Additional Services -->
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>French Modele Göre</h3>
+                    </div>
+                    <div class="price">+₺150-300</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-palette"></i>
+                        <h3>Ombre Modele Göre</h3>
+                    </div>
+                    <div class="price">+₺150-300</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-star"></i>
+                        <h3>Nail Art Modele Göre</h3>
+                    </div>
+                    <div class="price">+₺100-300</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-dice-d20"></i>
+                        <h3>İnci Tozu/Ayna Tozu</h3>
+                    </div>
+                    <div class="price">₺100</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-stamp"></i>
+                        <h3>Baskı/Sticker</h3>
+                    </div>
+                    <div class="price">₺50</div>
+                </div>
+                
+                <!-- Repair Services -->
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tırnak Tamiri</h3>
+                    </div>
+                    <div class="price">₺150-200</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-gem"></i>
+                        <h3>1 Adet Protez</h3>
+                    </div>
+                    <div class="price">₺150-200</div>
+                </div>
+                
+                <!-- Removal Services -->
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-eraser"></i>
+                        <h3>Kalıcı Oje Çıkartma</h3>
+                    </div>
+                    <div class="price">₺150</div>
+                </div>
+                <div class="price-card">
+                    <div class="service-name">
+                        <i class="fas fa-trash-alt"></i>
+                        <h3>Protez Tırnak Çıkartma</h3>
+                    </div>
+                    <div class="price">₺250</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="appointment" class="section">
+        <div class="container">
+            <h2>Randevu Al</h2>
+            <form class="appointment-form" id="appointmentForm">
+                <div class="form-group">
+                    <label for="name">Ad Soyad</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Hizmet</label>
+                    <select id="service" required>
+                        <option value="">Seçiniz</option>
+                        <option value="Nail Art">Nail Art</option>
+                        <option value="Manikür">Manikür</option>
+                        <option value="Protez Tırnak">Protez Tırnak</option>
+                        <option value="Kalıcı Oje">Kalıcı Oje</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Tarih</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Saat</label>
+                    <select id="time" required>
+                        <option value="">Seçiniz</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Randevu Oluştur</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <div class="container">
+            <h2>İletişim</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Yeşiltepe mahallesi Alipaşa sokak no:8/b, İstanbul</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p><a href="tel:+19024000861">+1 (902) 400-0861</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:info@duygunailart.com">info@duygunailart.com</a></p>
+                </div>
+                <div class="working-hours">
+                    <h3>Çalışma Saatleri</h3>
+                    <p>Pazartesi - Cumartesi: 09:00 - 20:00</p>
+                    <p>Pazar: Kapalı</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Duygu Nail Art. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Show initial section
+        document.querySelector('#services').classList.add('active');
+
+        // Section switching function
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelector(`#${sectionId}`).classList.add('active');
+        }
+
+        // Show section and select service
+        function showSectionAndSelectService(sectionId, serviceName) {
+            showSection(sectionId);
+            document.getElementById('service').value = serviceName;
+            document.getElementById('service').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Date and time validation
+        const dateInput = document.querySelector('#date');
+        const timeSelect = document.querySelector('#time');
+        const workingHours = {
+            1: {start: 9, end: 20}, // Monday
+            2: {start: 9, end: 20}, // Tuesday
+            3: {start: 9, end: 20}, // Wednesday
+            4: {start: 9, end: 20}, // Thursday
+            5: {start: 9, end: 20}, // Friday
+            6: {start: 9, end: 20}  // Saturday
+        };
+
+        // Set min date to today
+        const today = new Date();
+        dateInput.min = today.toISOString().split('T')[0];
+
+        dateInput.addEventListener('change', updateAvailableTimes);
+
+        function updateAvailableTimes() {
+            timeSelect.innerHTML = '<option value="">Seçiniz</option>';
+            const selectedDate = new Date(dateInput.value);
+            const dayOfWeek = selectedDate.getDay();
+
+            if (dayOfWeek === 0) { // Sunday
+                alert('Pazar günleri kapalıyız. Lütfen başka bir gün seçin.');
+                dateInput.value = '';
+                return;
+            }
+
+            const hours = workingHours[dayOfWeek];
+            for (let i = hours.start; i < hours.end; i++) {
+                const timeOption = document.createElement('option');
+                timeOption.value = `${i}:00`;
+                timeOption.textContent = `${i}:00`;
+                timeSelect.appendChild(timeOption);
+            }
+        }
+
+        // Form submission
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            const message = `Yeni Randevu Talebi%0A%0A` +
+                          `İsim: ${name}%0A` +
+                          `Telefon: ${phone}%0A` +
+                          `Hizmet: ${service}%0A` +
+                          `Tarih: ${date}%0A` +
+                          `Saat: ${time}`;
+
+            window.location.href = `https://wa.me/19024000861?text=${message}`;
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-links') && !e.target.closest('.menu-toggle')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
